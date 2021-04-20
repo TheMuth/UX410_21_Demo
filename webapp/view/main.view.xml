@@ -1,9 +1,4 @@
-<mvc:View
-    controllerName="studend00.sap.education.project1.controller.main"
-    xmlns:mvc="sap.ui.core.mvc"
-    displayBlock="true"
-    xmlns="sap.m"
->
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="studend00.sap.education.project1.controller.main" displayBlock="true">
 	<Shell id="shell">
 		<App id="app">
 			<pages>
@@ -11,6 +6,7 @@
 					<content>
                     <Text text="First text"/>
                     <Button text="Press Me" press="doSomething"/>
+                    <Button xmlns="sap.m" text="Third" id="button2"/>
                     <Button text="Press Me Too" press="doSomething2"/>
                     </content>
 				</Page>
