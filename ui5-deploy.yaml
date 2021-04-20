@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: '1.0'
+metadata:
+  name: 'project1'
+type: application
+ui5Theme: sap_fiori_3
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: S4D_100
+          auth: basic
+        credentials:
+          username: env:UI5_USERNAME
+          password: env:UI5_PASSWORD
+        app:
+          name: zhello_00
+          description: zhello_00
+          package: ZTRAIN_00
+          transport: "S4DK900141"
